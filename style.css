@@ -1,0 +1,51 @@
+/*
+Theme Name: Mikado
+Theme URI: https://nnweb.net/themes/mikado/
+Author: Nikola Nikolić
+Author URI: https://nnweb.net/
+Description: Landing page theme featured by blog section.
+Version: 0.7
+Requires at least: 5.0
+Tested up to: 5.9
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mikado
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*
+@font-face {
+    font-family: 'Nunito-Medium';
+    src: url(./Nunito-Medium.eot);
+    src: url(./Nunito-Medium.eot?#iefix) format('embedded-opentype'),
+         url(./Nunito-Medium.otf) format('otf'),
+         url(./Nunito-Medium.svg#Nunito-Medium) format('svg'),
+         url(./Nunito-Medium.ttf) format('truetype'),
+         url(./Nunito-Medium.woff) format('woff'),
+         url(./Nunito-Medium.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Nunito-ExtraBold';
+    src: url(./Nunito-ExtraBold.eot);
+    src: url(./Nunito-ExtraBold.eot?#iefix) format('embedded-opentype'),
+         url(./Nunito-ExtraBold.otf) format('otf'),
+         url(./Nunito-ExtraBold.svg#Nunito-ExtraBold) format('svg'),
+         url(./Nunito-ExtraBold.ttf) format('truetype'),
+         url(./Nunito-ExtraBold.woff) format('woff'),
+         url(./Nunito-ExtraBold.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Nunito-Light';
+    src: url(./Nunito-Light.eot);
+    src: url(./Nunito-Light.eot?#iefix) format('embedded-opentype'),
+         url(./Nunito-Light.otf) format('otf'),
+         url(./Nunito-Light.svg#Nunito-Light) format('svg'),
+         url(./Nunito-Light.ttf) format('truetype'),
+         url(./Nunito-Light.woff) format('woff'),
+         url(./Nunito-Light.woff2) format('woff2');
+  }
+  */

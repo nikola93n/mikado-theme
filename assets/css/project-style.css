@@ -1,0 +1,67 @@
+.project-heading {
+    background-color: #F2F2F2;
+    border-top: 1px solid #00000010;
+}
+.project-heading h1 {    
+    font-family: var(--font-medium);
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+.single-project {
+    padding-top: 100px;    
+}
+.single-project .box {    
+    height: 400px;
+    background: #000;    
+    background-position: top;   
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;    
+}
+.single-project .box:hover {  
+    background-position: bottom !important;    
+}
+.single-project .box-container {
+    background: #222D50;
+    border-radius: 10px;
+}
+.single-project h3 {
+    font-family: 'Nunito ExtraBold';
+}
+.single-project .related-projects {
+    margin: 60px 0 40px 0;
+    padding-top: 10px;
+    border-top: 1px solid #88888844;
+}
+.single-project .img-container {
+    background: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.single-project .swiper-slide img {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px -1px 4px;
+}
+.single-project .swiper-slide {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.single-project .swiper-slide h5 {
+    margin-bottom: 20px;
+}
+.single-project .swiper-slide a {
+    color: #222D50;    
+    border: 1px solid #222d50;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+.single-project .swiper-slide a:hover {
+    background: #222d50;
+    color: #fac641;
+}
+@media(max-width: 768px) {
+    .single-project {
+    padding-top: 50px;
+    }
+}
+
+
