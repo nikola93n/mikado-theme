@@ -1,14 +1,18 @@
 @font-face {
-  font-family: "Nunito Light";
-  src: url(../fonts/Nunito-Light.ttf);
+    font-family: "Nunito Light";
+    src: url(../fonts/Nunito-Light.ttf);
 }
 @font-face {
-  font-family: "Nunito Medium";
-  src: url(../fonts/Nunito-Medium.ttf);
+font-family: "Nunito Medium";
+src: url(../fonts/Nunito-Medium.ttf);
 }
 @font-face {
-  font-family: "Nunito ExtraBold";
-  src: url(../fonts/Nunito-ExtraBold.ttf);
+font-family: "Nunito ExtraBold";
+src: url(../fonts/Nunito-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "bootstrap-icons";
+    src: url("../fonts/bootstrap-icons/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d") format("woff2"), url("../fonts/bootstrap-icons/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("woff");
 }
 
 :root {
