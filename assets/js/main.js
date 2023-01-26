@@ -38,7 +38,7 @@ const observer = new IntersectionObserver(entries => {
 });
 observer.observe(element);
 
-//Isotope
+//Isotope control
 // init Isotope
 var $grid = jQuery('#portfolio-list').isotope({
     // options

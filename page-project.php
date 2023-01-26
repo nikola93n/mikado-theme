@@ -120,7 +120,67 @@
                             <a
                                 href="<?php echo $related_project_two_url; ?>"><?php echo $related_project_two_link_text; ?></a>
                         </div>                        
-                    <?php endif; ?>                 
+                    <?php endif; ?>     
+                    <?php $related_project_three_image = get_field('related_project_three_image'); ?>                    
+                    <?php if(!empty($related_project_three_image)): ?>
+                        <div class="swiper-slide">
+                            <div class="img-container px-4 pt-4"><img class="img-fluid"
+                                    src="<?php echo $related_project_three_image['url']; ?>" alt=""></div>
+                            <?php $related_project_three_name = get_field('related_project_three_name'); ?>
+                            <?php if(!empty($related_project_three_name)): ?>
+                            <h5><?php echo $related_project_three_name; ?></h5>
+                            <?php endif; ?>
+                            <?php $related_project_three_link_text = get_field('related_project_three_link_text'); ?>
+                            <?php $related_project_three_url = get_field('related_project_three_url'); ?>
+                            <a
+                                href="<?php echo $related_project_three_url; ?>"><?php echo $related_project_three_link_text; ?></a>
+                        </div>                        
+                    <?php endif; ?>              
+                    <?php $related_project_four_image = get_field('related_project_four_image'); ?>                    
+                    <?php if(!empty($related_project_four_image)): ?>
+                        <div class="swiper-slide">
+                            <div class="img-container px-4 pt-4"><img class="img-fluid"
+                                    src="<?php echo $related_project_four_image['url']; ?>" alt=""></div>
+                            <?php $related_project_four_name = get_field('related_project_four_name'); ?>
+                            <?php if(!empty($related_project_four_name)): ?>
+                            <h5><?php echo $related_project_four_name; ?></h5>
+                            <?php endif; ?>
+                            <?php $related_project_four_link_text = get_field('related_project_four_link_text'); ?>
+                            <?php $related_project_four_url = get_field('related_project_four_url'); ?>
+                            <a
+                                href="<?php echo $related_project_four_url; ?>"><?php echo $related_project_four_link_text; ?></a>
+                        </div>                        
+                    <?php endif; ?>       
+                    <?php $related_project_five_image = get_field('related_project_five_image'); ?>                    
+                    <?php if(!empty($related_project_five_image)): ?>
+                        <div class="swiper-slide">
+                            <div class="img-container px-4 pt-4"><img class="img-fluid"
+                                    src="<?php echo $related_project_five_image['url']; ?>" alt=""></div>
+                            <?php $related_project_five_name = get_field('related_project_five_name'); ?>
+                            <?php if(!empty($related_project_five_name)): ?>
+                            <h5><?php echo $related_project_five_name; ?></h5>
+                            <?php endif; ?>
+                            <?php $related_project_five_link_text = get_field('related_project_five_link_text'); ?>
+                            <?php $related_project_five_url = get_field('related_project_five_url'); ?>
+                            <a
+                                href="<?php echo $related_project_five_url; ?>"><?php echo $related_project_five_link_text; ?></a>
+                        </div>                        
+                    <?php endif; ?>              
+                    <?php $related_project_six_image = get_field('related_project_six_image'); ?>                    
+                    <?php if(!empty($related_project_six_image)): ?>
+                        <div class="swiper-slide">
+                            <div class="img-container px-4 pt-4"><img class="img-fluid"
+                                    src="<?php echo $related_project_six_image['url']; ?>" alt=""></div>
+                            <?php $related_project_six_name = get_field('related_project_six_name'); ?>
+                            <?php if(!empty($related_project_six_name)): ?>
+                            <h5><?php echo $related_project_six_name; ?></h5>
+                            <?php endif; ?>
+                            <?php $related_project_six_link_text = get_field('related_project_six_link_text'); ?>
+                            <?php $related_project_six_url = get_field('related_project_six_url'); ?>
+                            <a
+                                href="<?php echo $related_project_six_url; ?>"><?php echo $related_project_six_link_text; ?></a>
+                        </div>                        
+                    <?php endif; ?>              
                 </div>
             </div>
         </div>
