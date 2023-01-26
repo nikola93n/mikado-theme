@@ -18,8 +18,8 @@
             <div class="d-flex justify-content-center ">
                 <p class="made mt-3 mt-0 text-center">© <?php echo date('Y'); ?>
                     <?php echo get_theme_mod('set_footer'); ?> | Powered By <a href="https://nnweb.net"
-                        target="_blank">M!kado Theme</a></p>
-            </div>vssdfsafaefesa
+                        target="_blank">M!kado Theme</a></p>                        
+            </div>
         </div>
     </div>
 </footer>
