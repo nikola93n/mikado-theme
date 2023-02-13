@@ -1,19 +1,58 @@
 @font-face {
-    font-family: "Nunito Light";
-    src: url(../fonts/Nunito-Light.ttf);
+  font-family: "Nunito Light";
+  src: url(../fonts/Nunito-Light.ttf);
 }
 @font-face {
-font-family: "Nunito Medium";
-src: url(../fonts/Nunito-Medium.ttf);
+  font-family: "Nunito Medium";
+  src: url(../fonts/Nunito-Medium.ttf);
 }
 @font-face {
-font-family: "Nunito ExtraBold";
-src: url(../fonts/Nunito-ExtraBold.ttf);
+  font-family: "Nunito ExtraBold";
+  src: url(../fonts/Nunito-ExtraBold.ttf);
 }
 @font-face {
     font-family: "bootstrap-icons";
     src: url("../fonts/bootstrap-icons/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d") format("woff2"), url("../fonts/bootstrap-icons/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("woff");
+  }
+
+@font-face {
+    font-family: 'Nunito Extra Light';
+    src: url(../fonts/nunito/nunito-extra-light/Nunito-ExtraLight.eot);
+    src: url(../fonts/nunito/nunito-extra-light/Nunito-ExtraLight.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/nunito/nunito-extra-light/Nunito-ExtraLight.otf) format('otf'),
+    url(../fonts/nunito/nunito-extra-light/Nunito-ExtraLight.woff) format('woff'),
+    url(../fonts/nunito/nunito-extra-light/Nunito-ExtraLight.woff2) format('woff2'),
+    url(../fonts/nunito/nunito-extra-light/Nunito-ExtraLight.svg#Nunito-ExtraLight) format('svg');
+    font-weight: 200;
+    font-style: normal;
 }
+@font-face {
+    font-family: 'Nunito Black';
+    src: url(../fonts/nunito/nunito-black/Nunito-Black.eot);
+    src: url(../fonts/nunito/nunito-black/Nunito-Black.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/nunito/nunito-black/Nunito-Black.otf) format('otf'),
+    url(../fonts/nunito/nunito-black/Nunito-Black.woff) format('woff'),
+    url(../fonts/nunito/nunito-black/Nunito-Black.woff2) format('woff2'),
+    url(../fonts/nunito/nunito-black/Nunito-Black.svg#Nunito-Black) format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+  
+
+@font-face {
+    font-family: "Anton";    
+    src: url("../fonts/anton/Anton-Regular.eot");
+    src: url("../fonts/anton/Anton-Regular.eot?#iefix");
+    src: url("../fonts/anton/Anton-Regular.woff2");
+    src: url("../fonts/anton/Anton-Regular.woff");    
+    src: url("../fonts/anton/Anton-Regular.svg");
+    src: url("../fonts/anton/Anton-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 
 :root {
   --primary-color: #05bb75;  
@@ -21,9 +60,9 @@ src: url(../fonts/Nunito-ExtraBold.ttf);
   --accent-color: #FAC641;
   --dark: #333333;
   --white: #ffffff;    
-  --font-light: "Nunito Light";
+  /* --font-light: "Nunito Light";
   --font-medium: "Nunito Medium";
-  --font-extrabold: "Nunito ExtraBold";  
+  --font-extrabold: "Nunito ExtraBold";   */
   --transition: all 0.3s ease-in-out 0s;
 }
 
@@ -41,6 +80,9 @@ a {
     text-decoration: none;  
     position: relative;  
 }
+a:focus-visible {
+    outline: none;
+}
 ul {
     list-style: none;
     padding-left: 0;
@@ -50,7 +92,7 @@ ul {
     padding: 7.5rem 0;
 }
 h2 {
-    font-family: var(--font-medium);
+    /* font-family: var(--font-medium); */
     font-size: 3rem;
 }
 /*==================================*/
@@ -212,15 +254,20 @@ header a:hover::before {
     padding: 10px 30px;
     font-family: var(--font-medium);  
     transition: var(--transition);  
+    outline: none;
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
     background: transparent;
     color: var(--primary-color);
     border-color: var(--primary-color);    
 }
+.btn-primary:focus {
+    box-shadow: 0 0 0 .25rem rgba(5,187,117, 0.5);
+}
 .hero h1 {
     font-size: 4rem;
-    font-family: var(--font-extrabold);
+    /* font-family: 'Nunito ExtraBold', sans-serif; */
 }
 .hero h1 span {
     color: var(--primary-color);
@@ -574,6 +621,9 @@ footer ul,
 footer p {
     margin: 0;
 }
+footer ul li:not(:last-child) {
+    margin-right: 1.5rem;
+}
 footer i {
     color: var(--white);
     transition: var(--transition);      
@@ -605,17 +655,13 @@ footer .made a:not(.no-shadow):hover {
     cursor: pointer;
     z-index: 666;
     transition: var(--transition);
-  }
+}
   #scrollToTop i {
       color: var(--white);
-  }
+}
   #scrollToTop:hover {
     background: var(--accent-color);
-  }
-
-
-
-
+}
 
 .grid-item figure {
     position: relative;

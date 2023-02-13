@@ -12,4 +12,5 @@ Adding responsive number of Related project (ACF chnages script file)
 Adding more places than two for related projects
 Adding a latest bootstrap icons
 
-
+# Version 0.8
+Adding custom font to the theme customizer

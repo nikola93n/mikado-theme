@@ -5,7 +5,7 @@ function mikado_customizer($wp_customize) {
     $wp_customize -> add_section(
         'sec_footer', array(
             'title' => 'Footer Settings',
-            'description' => 'Footer Section'
+            'description' => 'Add a copyright and social links to your profiles on social networks.'
         )
     );
 
@@ -26,6 +26,7 @@ function mikado_customizer($wp_customize) {
         )
     );
 
+    
     //First Social Icon
     $wp_customize -> add_setting(
         'set_social_one', array(
@@ -126,7 +127,109 @@ function mikado_customizer($wp_customize) {
             'section' => 'sec_footer',
             'type' => 'text'
         )
+    );    
+
+    //Fourth Social Icon
+    $wp_customize -> add_setting(
+        'set_social_four', array(
+            'type' => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
     );
+    $wp_customize -> add_control(
+        'set_social_four', array(
+            'label' => 'Social Icon Four',
+            'description' => 'Enter a class for an icon',
+            'section' => 'sec_footer',
+            'type' => 'text'
+        )
+    );
+    
+    //Fourth Social Icon URL
+    $wp_customize -> add_setting(
+        'set_social_four_url', array(
+            'type' => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+    $wp_customize -> add_control(
+        'set_social_four_url', array(
+            'label' => 'Social Icon Four URL',
+            'description' => 'Enter a link to your profile',
+            'section' => 'sec_footer',
+            'type' => 'text'
+        )
+    );   
+
+    //Fifth Social Icon
+    $wp_customize -> add_setting(
+        'set_social_five', array(
+            'type' => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+    $wp_customize -> add_control(
+        'set_social_five', array(
+            'label' => 'Social Icon Five',
+            'description' => 'Enter a class for an icon',
+            'section' => 'sec_footer',
+            'type' => 'text'
+        )
+    );
+    
+    //Fifth Social Icon URL
+    $wp_customize -> add_setting(
+        'set_social_five_url', array(
+            'type' => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+    $wp_customize -> add_control(
+        'set_social_five_url', array(
+            'label' => 'Social Icon Five URL',
+            'description' => 'Enter a link to your profile',
+            'section' => 'sec_footer',
+            'type' => 'text'
+        )
+    );  
+
+    //Six Social Icon
+    $wp_customize -> add_setting(
+        'set_social_six', array(
+            'type' => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+    $wp_customize -> add_control(
+        'set_social_six', array(
+            'label' => 'Social Icon Six',
+            'description' => 'Enter a class for an icon',
+            'section' => 'sec_footer',
+            'type' => 'text'
+        )
+    );
+    
+    //Six Social Icon URL
+    $wp_customize -> add_setting(
+        'set_social_six_url', array(
+            'type' => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+    $wp_customize -> add_control(
+        'set_social_six_url', array(
+            'label' => 'Social Icon Six URL',
+            'description' => 'Enter a link to your profile',
+            'section' => 'sec_footer',
+            'type' => 'text'
+        )
+    );  
 
 }
 add_action('customize_register', 'mikado_customizer');  

@@ -11,7 +11,7 @@ function load_scripts(){
     wp_enqueue_style('bootstrap-icons', get_template_directory_uri() . '/assets/vendors/css/bootstrap-icons.css', array(), '1.10.3', 'all');   
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/vendors/css/swiper-bundle.min.css', array(), '1.0', 'all');
     wp_enqueue_style('my-project-style', get_template_directory_uri() . '/assets/css/project-style.css', array(), '1.0', 'all');    
-    wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0', 'all');   
+    wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0', 'all');       
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/vendors/js/bootstrap.bundle.min.js', array(), '5.0.2', 'all');
     wp_enqueue_script('vanilla-tilt', get_template_directory_uri() . '/assets/vendors/js/vanilla-tilt.min.js', array(), '1.0', 'all');
     wp_enqueue_script('pure-counter', get_template_directory_uri() . '/assets/vendors/js/purecounter.js', array(), '1.0', 'all');
@@ -125,3 +125,90 @@ function mikadotheme_import_files() {
     wp_localize_script( 'script-no-slides', 'slides_per_view_large_screen', $slides_per_view_large_screen);  
   }
   add_action( 'wp_enqueue_scripts', 'enqueue_slides_number_script' );
+
+
+function mikado_custom_fonts() {
+  $fonts = array(
+      'Nunito Light' => 'Nunito Light',
+      'Nunito Medium' => 'Nunito Medium',
+      'Nunito ExtraBold' => 'Nunito Extra Bold',
+      'Anton' => 'Anton'
+  );
+  return $fonts;
+}
+function mikado_custom_font_weight() {
+  $font_weight = array(
+      '200' => 'Extra Light 200',
+      '300' => 'Light 300',
+      '400' => 'Regular 400',
+      '500' => 'Medium 500',
+      '600' => 'Semi Bold 600',
+      '700' => 'Bold 700',
+      '800' => 'Extra Bold 800',
+      '900' => 'Black 900'
+  );
+  return $font_weight;
+}
+function mikado_custom_font_controls($wp_customize) {
+  $wp_customize -> add_section(
+    'mikado_custom_fonts', array(
+      'title' => __( 'Custom Fonts' ),
+      'description' => 'Choose a custom font',
+      'priority' => 30
+    ) 
+  );
+
+  $wp_customize -> add_setting(
+    'mikado_custom_font', array(
+      'type' => 'theme_mod',
+      'default' => 'Nunito Light',
+      'transport' => 'refresh'
+    )
+  );
+
+  $wp_customize -> add_control( 
+    'mikado_custom_font', array(
+      'label' => __( 'Select Font' ),
+      'description' => 'Please select one of fonts family',
+      'section' => 'mikado_custom_fonts',
+      'type' => 'select',
+      'choices' => mikado_custom_fonts(),
+    ) 
+  );
+
+  $wp_customize -> add_setting(
+    'mikado_custom_font_weight', array(
+      'type' => 'theme_mod',
+      'default' => '400',
+      'transport' => 'refresh'
+    )
+  );
+
+  $wp_customize -> add_control( 
+    'mikado_custom_font_weight', array(
+      'label' => __( 'Select Font Weight' ),
+      'description' => 'Please select one of font weight',
+      'section' => 'mikado_custom_fonts',
+      'type' => 'select',
+      'choices' => mikado_custom_font_weight(),
+    ) 
+  );
+
+}
+add_action( 'customize_register', 'mikado_custom_font_controls' );
+
+function mikado_custom_fonts_inline_style() {
+  $custom_font = get_theme_mod( 'mikado_custom_font', 'Open Sans' );
+  $custom_css = "body h1, body h2, body h3 { font-family: '{$custom_font}', sans-serif; }";  
+  $custom_font_weight = get_theme_mod( 'mikado_custom_font_weight', 400 );
+  $custom_weight_css = "body .hero p { font-weight: {$custom_font_weight}; }";  
+  wp_add_inline_style( 'main-style', $custom_css );
+  wp_add_inline_style( 'main-style', $custom_weight_css );
+  // print_r($custom_css);
+  // print_r($custom_weight_css);
+}
+add_action( 'wp_enqueue_scripts', 'mikado_custom_fonts_inline_style' );
+
+
+
+
